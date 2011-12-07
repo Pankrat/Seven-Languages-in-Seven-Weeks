@@ -1,0 +1,9 @@
+I decided to read Seven Languages in Seven Weeks while recovering from a
+surgery. These are my incomplete solutions for the self study tasks.
+
+Notes
+-----
+
+ * Used assertions instead of output for some of the solutions
+ * Run Scala programs from the scala subdir: `scala censor.scala`
+ * Used Scala version 2.9.1
