@@ -1,4 +1,5 @@
 object Rules {
+
     val Indices = List(
         (0, 1, 2), (3, 4, 5), (6, 7, 8),
         (0, 3, 6), (1, 4, 7), (2, 5, 8),
@@ -12,9 +13,10 @@ object Rules {
     def hasWon(x: Char, y: Char, z: Char): Boolean = {
         (x == y && y == z && (Players.contains(x)))
     }
+
 }
 
-class TicTacToe(setting: String) {
+class Game(setting: String) {
 
     val board = setting.toCharArray()
 
@@ -29,8 +31,8 @@ class TicTacToe(setting: String) {
 
 }
 
-assert (new TicTacToe("xxxooxoo ").winner == 'x')
-assert (new TicTacToe("xoxooxxo ").winner == 'o')
-assert (new TicTacToe(" oxoxoxox").winner == 'x')
-assert (new TicTacToe("xoxooxxxo").winner == Rules.Tie)
-assert (new TicTacToe("         ").winner == Rules.Unfinished)
+assert (new Game("xxxooxoo ").winner == 'x')
+assert (new Game("xoxooxxo ").winner == 'o')
+assert (new Game(" oxoxoxox").winner == 'x')
+assert (new Game("xoxooxxxo").winner == Rules.Tie)
+assert (new Game("         ").winner == Rules.Unfinished)
